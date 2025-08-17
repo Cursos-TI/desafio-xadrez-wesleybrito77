@@ -1,32 +1,81 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+int main ()
+{
+// incio do jogo de xadrez  
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+//variaveis para movimentação da torre 
+    int a=1;
+    int casas;
+    char sentido [20];
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+//logica de movimentação da torre utilizando a instrução de repetição while
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+printf(" bem vindos ao jogo de xadrez !!\n\n");
+printf("por favor digite qual direção , para cima ou para baixo para a torre : ");
+scanf("%s",sentido);
+printf("por favor digite o numero de casas :");
+scanf("%d",&casas);
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+printf("***********************************\n");
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+while (a<=casas){ 
+printf("move %d casas para %s\n",a,sentido);      
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+      a ++;
+         
+    }
 
+   
+printf("\n\n");
+
+//variaveis para movimentação do bispo
+
+int b=1;
+int casas_b;
+char sentido_b [20];
+
+//logica de movimentação do bispo utilizando a instrução de repetição do-while
+
+printf("digite o sentido em diagonal para o bispo, direita ou esquerda :");
+scanf("%s",sentido_b);
+
+printf("agora digite o numero de casas :");
+scanf("%d",&casas_b);
+
+do{ printf("move %d casas para %s e %d para cima\n",b,sentido_b,b);
+
+    b ++;
+}
+while (b<=casas_b);
+
+printf("\n\n");
+
+printf("***********************************\n");
+
+//variaveis de movimentação da rainha
+int casas_c;
+char sentido_c [20];
+
+
+//logiga de movimentação da rainha utilzando a instrução de repetição for 
+
+printf("digite o sentido de movimento para rainha :");
+scanf("%s",sentido_c);
+printf("agora digite quantas casas devem se mover a rainha :");
+scanf("%d",&casas_c);
+
+for (int c = 1; c <= casas_c; c++)
+{
+   printf("move %d  casas para %s\n",c,sentido_c);
+}
+
+printf("\n\n");
+
+printf("***********************************\n");
+
+  // final da movimentação no jogo 
+  
     return 0;
 }
